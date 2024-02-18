@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genious Website</title>
+    <!-- daisi ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!-- main content area -->
+        <div class="w-[90%] mx-auto my-12 flex justify-around gap-12">
+
+            <!-- ************shap area -->
+            <div class="flex-4 grid grid-cols-1 md: grid-cols-2 lg: grid-cols-3 gap-14">
+                <!-- triangal -->
+                <div class="card w-96 bg-base-100 shadow-xl border-2 border-dashed py-8 px-8">
+                    <figure><img src="images/triangle.png" alt="triangal" /></figure>
+                    <div class="card-body">
+                        <div class=" flex-col gap-5">
+                            <h2 class="text-2xl font-bold text-center">Triangal</h2>
+                            <p class="text-center">Area (A) = 0.5 × b × h</p>
+                            <div class="flex gap-2 items-center justify-center">
+                                <input id="triangal-base" type="text" placeholder="b" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>
+                                <input id="triangal-height" type="text" placeholder="h" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>  
+                            </div>
+                            <p class="mt-2 text-xl">Area: <span id="t-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <button onclick="calculateTriangalArea()" class=" p-3 text-white rounded-lg bg-[#1090D8] mt-8">Calculate</button>
+                    </div>
+                </div>
+                <!-- Rectangal -->
+                <div class="card w-96 bg-base-100 shadow-xl border-2 border-dashed py-8 px-8">
+                    <figure><img src="images/rectangle.png" alt="triangal" /></figure>
+                    <div class="card-body">
+                        <div class=" flex-col gap-5">
+                            <h2 class="text-2xl font-bold text-center">Rectangal</h2>
+                            <p class="text-center">Area (A) = w × l</p>
+                            <div class="flex gap-2 items-center justify-center">
+                                <input id="r-width" type="text" placeholder="w" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>
+                                <input id="r-height" type="text" placeholder="l" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>  
+                            </div>
+                            <p class="mt-2 text-xl">Area: <span id="r-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <button onclick="calculateRArea()" class=" p-3 text-white rounded-lg bg-[#1090D8] mt-8">Calculate</button>
+                    </div>
+                </div>
+                <!-- Parallelogram -->
+                <div class="card w-96 bg-base-100 shadow-xl border-2 border-dashed py-8 px-8">
+                    <figure><img src="images/parallelogram.png" alt="triangal" /></figure>
+                    <div class="card-body">
+                        <div class=" flex-col gap-5">
+                            <h2 class="text-2xl font-bold text-center">Parallelogram</h2>
+                            <p class="text-center">Area (A) = b × h</p>
+                            <div class="flex gap-2 items-center justify-center">
+                                <input id="p-width" type="text" placeholder="b" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>
+                                <input id="p-height" type="text" placeholder="h" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>  
+                            </div>
+                            <p class="mt-2 text-xl">Area: <span id="p-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <button onclick="parallelogramCalculate()" class=" p-3 text-white rounded-lg bg-[#1090D8] mt-8">Calculate</button>
+                    </div>
+                </div>
+                <!-- triangal -->
+                <div class="card w-96 bg-base-100 shadow-xl border-2 border-dashed py-8 px-8">
+                    <figure><img src="images/triangle.png" alt="triangal" /></figure>
+                    <div class="card-body">
+                        <div class=" flex-col gap-5">
+                            <h2 class="text-2xl font-bold text-center">Triangal</h2>
+                            <p class="text-center">Area (A) = 0.5 × b × h</p>
+                            <div class="flex gap-2 items-center justify-center">
+                                <input id="triangal-base" type="text" placeholder="b" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>
+                                <input id="triangal-height" type="text" placeholder="h" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>  
+                            </div>
+                            <p class="mt-2 text-xl">Area: <span id="t-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <button onclick="calculateTriangalArea()" class=" p-3 text-white rounded-lg bg-[#1090D8] mt-8">Calculate</button>
+                    </div>
+                </div>
+                <!-- Rectangal -->
+                <div class="card w-96 bg-base-100 shadow-xl border-2 border-dashed py-8 px-8">
+                    <figure><img src="images/rectangle.png" alt="triangal" /></figure>
+                    <div class="card-body">
+                        <div class=" flex-col gap-5">
+                            <h2 class="text-2xl font-bold text-center">Rectangal</h2>
+                            <p class="text-center">Area (A) = w × l</p>
+                            <div class="flex gap-2 items-center justify-center">
+                                <input id="r-width" type="text" placeholder="w" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>
+                                <input id="r-height" type="text" placeholder="l" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>  
+                            </div>
+                            <p class="mt-2 text-xl">Area: <span id="r-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <button onclick="calculateRArea()" class=" p-3 text-white rounded-lg bg-[#1090D8] mt-8">Calculate</button>
+                    </div>
+                </div>
+                <!-- Parallelogram -->
+                <div class="card w-96 bg-base-100 shadow-xl border-2 border-dashed py-8 px-8">
+                    <figure><img src="images/parallelogram.png" alt="triangal" /></figure>
+                    <div class="card-body">
+                        <div class=" flex-col gap-5">
+                            <h2 class="text-2xl font-bold text-center">Parallelogram</h2>
+                            <p class="text-center">Area (A) = b × h</p>
+                            <div class="flex gap-2 items-center justify-center">
+                                <input id="p-width" type="text" placeholder="b" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>
+                                <input id="p-height" type="text" placeholder="h" class="bg-gray-100 p-2 w-32">
+                                <span>cm</span>  
+                            </div>
+                            <p class="mt-2 text-xl">Area: <span id="p-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
+                        <button onclick="parallelogramCalculate()" class=" p-3 text-white rounded-lg bg-[#1090D8] mt-8">Calculate</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ****************calculation area -->
+            <div class=" flex-1 text-center border border-2 border-dashed h-96">
+                <h1 class="text-2xl underline">Area Calculation</h1>
+            </div>
+        </div>
+    </main>
+
+    <!-- external js file link -->
+    <!-- <script src="js/triangal.js"></script>
+    <script src="js/rectangal.js"></script>
+    <script src="js/parallelogram.js"></script> -->
+    <script src="js/reused-function.js"></script>
+</body>
+</html>
